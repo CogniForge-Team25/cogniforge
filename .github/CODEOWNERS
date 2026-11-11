@@ -1,0 +1,8 @@
+/backend/src/main/java/com/cogniforge/auth/      @CogniForge-Team25/auth-team
+/backend/src/main/java/com/cogniforge/controls/  @CogniForge-Team25/controls-team
+/backend/src/main/java/com/cogniforge/policy/    @CogniForge-Team25/policy-team
+/backend/src/main/java/com/cogniforge/evidence/  @CogniForge-Team25/evidence-team
+/backend/src/main/java/com/cogniforge/actions/   @CogniForge-Team25/actions-team
+/frontend/                                       @CogniForge-Team25/auth-team
+/infra/                                          @CogniForge-Team25/controls-team
+/.github/                                        @CogniForge-Team25/controls-team

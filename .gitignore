@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+backend/target/
+*.class
+*.jar
+*.log
+*.iml
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
