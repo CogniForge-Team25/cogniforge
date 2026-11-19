@@ -1,7 +1,6 @@
 package com.cogniforge.controls;
 
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 // Runs against the local Docker database when DB_PASSWORD is set.
 // CI does not set it, so this test is skipped there.
 @SpringBootTest
-@EnabledIfEnvironmentVariable(named = "DB_PASSWORD", matches = ".+")
 class FrameworkSeedTest {
 
     @Autowired

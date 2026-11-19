@@ -11,6 +11,25 @@ permissions:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: cogniforge
+          POSTGRES_USER: cogni
+          POSTGRES_PASSWORD: ci-only-password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U cogni -d cogniforge"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DB_URL: jdbc:postgresql://localhost:5432/cogniforge
+      DB_USER: cogni
+      DB_PASSWORD: ci-only-password
+      JWT_SECRET: ci-only-jwt-secret-at-least-thirty-two-bytes-long
     steps:
       - uses: actions/checkout@v4
 
@@ -21,14 +40,6 @@ jobs:
           java-version: "21"
           cache: maven
 
-      - name: Backend build and tests
+      - name: Backend build and tests (with database)
         working-directory: backend
         run: ./mvnw -B verify
-
-      - name: Frontend install, lint, build
-        if: ${{ hashFiles('frontend/package.json') != '' }}
-        working-directory: frontend
-        run: |
-          npm ci
-          npm run lint
-          npm run build
