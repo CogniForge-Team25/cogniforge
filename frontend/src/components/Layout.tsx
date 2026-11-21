@@ -5,6 +5,7 @@ import { DashIcon, ShieldIcon } from './Icons';
 // Breadcrumb text for each page. Add a line here when a new page is added.
 const BREADCRUMBS: Record<string, string[]> = {
   '/dashboard': ['Security Readiness Dashboard'],
+  '/frameworks': ['Compliance', 'Frameworks'],
 };
 
 function formatRole(role: string): string {
@@ -50,6 +51,12 @@ export default function Layout() {
         <NavLink to="/dashboard" className="shell-link">
           <DashIcon />
           Dashboard
+        </NavLink>
+
+        <p className="shell-section">COMPLIANCE</p>
+        <NavLink to="/frameworks" className="shell-link">
+          <ShieldIcon />
+          Frameworks
         </NavLink>
 
         <div className="shell-grow" />

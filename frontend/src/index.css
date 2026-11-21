@@ -495,3 +495,73 @@ h2 { font-size: 1.2rem; margin: 1.5rem 0 0.75rem; }
 
 .shell-content { padding: 28px 32px; max-width: 1240px; width: 100%; }
 .shell-content h1 { margin: 0 0 6px; font-size: 26px; font-weight: 700; color: #0f172a; }
+
+/* ---------- Shared UI blocks (from Figma) ---------- */
+.ui-page-sub { margin: 0 0 24px; font-size: 13.5px; color: #5b6678; }
+.ui-section-title { margin: 28px 0 12px; font-size: 17px; font-weight: 700; color: #0f172a; }
+.ui-card {
+  background: #fff;
+  border: 1px solid #e4e8ef;
+  border-radius: 14px;
+  padding: 20px;
+}
+.ui-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 99px;
+  background: #eef1f6;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5b6678;
+}
+.ui-btn {
+  padding: 9px 14px;
+  border: 1px solid #2b50e6;
+  border-radius: 9px;
+  background: #2b50e6;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+.ui-btn:hover { background: #2142c4; border-color: #2142c4; }
+.ui-btn-outline { background: #fff; border-color: #e4e8ef; color: #0f172a; }
+.ui-btn-outline:hover { background: #f5f7fb; border-color: #e4e8ef; }
+
+.ui-table-wrap { padding: 0; overflow: hidden; }
+.ui-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.ui-table th {
+  padding: 11px 20px;
+  background: #f8fafc;
+  text-align: left;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+.ui-table td { padding: 13px 20px; border-top: 1px solid #e4e8ef; color: #5b6678; }
+.ui-table td:first-child { font-weight: 600; color: #0f172a; white-space: nowrap; }
+
+/* Frameworks page */
+.fw-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.fw-card { display: flex; flex-direction: column; gap: 16px; }
+.fw-card-selected { border-color: #2b50e6; box-shadow: 0 0 0 3px rgba(43, 80, 230, 0.12); }
+.fw-card-head { display: flex; align-items: center; gap: 12px; }
+.fw-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #e8eeff;
+  color: #2b50e6;
+  flex-shrink: 0;
+}
+.fw-name { margin: 0 0 3px; font-size: 15px; font-weight: 700; color: #0f172a; }
+.fw-facts { margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.fw-facts div { display: flex; gap: 12px; }
+.fw-facts dt { width: 130px; font-size: 12.5px; color: #5b6678; }
+.fw-facts dd { margin: 0; font-size: 13px; font-weight: 500; color: #0f172a; }
